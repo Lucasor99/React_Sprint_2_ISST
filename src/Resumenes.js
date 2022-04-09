@@ -26,7 +26,6 @@ export default class Resumenes extends React.Component {
 			datos: [[]]
 		};
 
-    fotos = [foto,foto2,foto5,foto7];
     fotos = [foto,foto2,foto3,foto4,foto5,foto6,foto7,foto8];
     this.downloadpdf = this.downloadpdf.bind(this);
     this.downloadaudio = this.downloadaudio.bind(this);
@@ -40,6 +39,7 @@ export default class Resumenes extends React.Component {
 		let resumenes = await response.json();
 
     this.setState({datos: resumenes});
+
     console.log(resumenes[0])
     
     console.log(resumenes[0].titulo)
