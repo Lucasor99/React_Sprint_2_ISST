@@ -64,7 +64,7 @@ export default class Resumenes extends React.Component {
         return <Card key={resumen.id}
         leer ={()=> this.downloadpdf(resumen.id)}
         escuchar = {()=> this.downloadaudio(resumen.id)}
-        foto1={fotos[index]}
+        foto1={foto}
         title={resumen.titulo}
         descripcion={resumen.descripcion}/>
       })}
