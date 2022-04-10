@@ -60,12 +60,13 @@
 }
 
 .resumenesflex{
-    display: flex;
+    display: grid;
     flex-direction: row;
     margin-bottom: 50px;
     margin-right: 100px;
     margin-top: 50px;
-    
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
 }
 
 .resum{
@@ -74,7 +75,8 @@
     background-size: 400%;
     background: rgb(85,249,255);
     background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(33,33,33,1) 21%, rgba(52,52,52,1) 46%, rgba(78,78,78,1) 70%, rgba(98,98,98,1) 81%, rgba(116,116,116,1) 94%, rgba(125,125,125,1) 100%);
-    }
+    width: 100% ;
+}
 
 .novedades{
     width: 100%;
