@@ -176,3 +176,10 @@
   .resumenesflex{
       width: 100%;
   }
+
+  .formulario input{
+      color: white;
+      font-size: 18px;
+      font-family: "Montserrat";
+  }
+  

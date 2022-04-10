@@ -48,18 +48,16 @@ export default function Formulario () {
              var fileReader = new FileReader();
              var base64;
              // Onload of file read the file content
-             fileReader.onload = function(fileLoadedEvent) {
-                 base64 = fileLoadedEvent.target.result;
+             fileReader.onload = function() {
+                
                  // Print data in console
-                 const raw = base64;
-                    let result = '';
-                    for (let i = 0; i < raw.length; i++) {
-                    const hex = raw.charCodeAt(i).toString(16);
-                    result += (hex.length === 2 ? hex : '0' + hex);
-                    }
-                   const hexa = result.toUpperCase();
-                 console.log(hexa);
-                 setForm({documento : hexa})
+                 var arrayAuxiliar=[];
+                 base64 = fileReader.result;
+                 
+                 arrayAuxiliar=base64.split(',');
+                 console.log(arrayAuxiliar[1]);
+                 
+                 setForm({documento : arrayAuxiliar[1]})
              };
              // Convert data to base64
              fileReader.readAsDataURL(fileToLoad);
@@ -83,7 +81,6 @@ export default function Formulario () {
             <p>Resumen a evaluar</p>
             <div className="resumenformulario">
             <input className="form-control" type="file" id="formFile" name='documento' onChange={handleFileChange} />
-            <button>Explorar fichero</button>
             </div>
             <p>Titulo del resumen</p>
             <input
