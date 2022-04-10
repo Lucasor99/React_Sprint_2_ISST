@@ -49,7 +49,7 @@ export default function Formulario () {
              var base64;
              // Onload of file read the file content
              fileReader.onload = function() {
-                
+           
                  // Print data in console
                  var arrayAuxiliar=[];
                  base64 = fileReader.result;
@@ -57,7 +57,9 @@ export default function Formulario () {
                  arrayAuxiliar=base64.split(',');
                  console.log(arrayAuxiliar[1]);
                  
-                 setForm({documento : arrayAuxiliar[1]})
+                 setForm({
+                   ...form,
+                   documento : arrayAuxiliar[1]})
              };
              // Convert data to base64
              fileReader.readAsDataURL(fileToLoad);
