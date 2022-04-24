@@ -57,15 +57,15 @@ export default function Formulario () {
                  arrayAuxiliar=base64.split(',');
                  console.log(arrayAuxiliar[1]);
                  
-                 setForm({documento : arrayAuxiliar[1]})
+                 setForm({
+                   ...form,
+                   documento : arrayAuxiliar[1]})
              };
              // Convert data to base64
              fileReader.readAsDataURL(fileToLoad);
-         }
-
-            
-        
+            }
     }
+    
     const handleSubmit = async() =>{
         await axios.post('http://localhost:8080/resumenes/crear', form)
         console.log(form);

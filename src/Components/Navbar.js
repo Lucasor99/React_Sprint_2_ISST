@@ -16,7 +16,13 @@ export default function Navbar (props) {
                     </Link></li>
                 <li><Link to= "/resumenes">
                        Resúmenes
-                    </Link></li>         
+                    </Link></li>
+                <li><Link to= "/evaluaciones">
+                    Evaluacion
+                </Link></li>  
+                <li><Link to= "/enviar">
+                    Subir Contenido
+                </Link></li>                  
             </ul> 
             </nav>
         </div>);
