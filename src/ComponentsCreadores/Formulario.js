@@ -63,11 +63,9 @@ export default function Formulario () {
              };
              // Convert data to base64
              fileReader.readAsDataURL(fileToLoad);
-         }
-
-            
-        
+            }
     }
+    
     const handleSubmit = async() =>{
         await axios.post('http://localhost:8080/resumenes/crear', form)
         console.log(form);

@@ -61,16 +61,19 @@ export default class Resumenes extends React.Component {
       </div>
       <div className='resumenesflex'>
       {this.state.datos.map((resumen,index)=>{
-        return <Card key={resumen.id}
-        leer ={()=> this.downloadpdf(resumen.id)}
-        escuchar = {()=> this.downloadaudio(resumen.id)}
-        foto1={fotos[index]}
-        title={resumen.titulo}
-        descripcion={resumen.descripcion}/>
+        if(resumen.publicado == true){
+          return <Card key={resumen.id}
+          leer ={()=> this.downloadpdf(resumen.id)}
+          escuchar = {()=> this.downloadaudio(resumen.id)}
+          foto1={fotos[index]}
+          title={resumen.titulo}
+          descripcion={resumen.descripcion}/>
+        }
+
       })}
       </div>
 
-    </div>
+    </div> 
     ); 
     
   }
